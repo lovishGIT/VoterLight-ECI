@@ -59,17 +59,18 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <h3 className="font-bold text-3xl mb-2">Sections</h3>
                     {footerLinks.map((footLink) => {
-                        return <a href={footLink?.link || ''} className="text-lg">{footLink.text}</a>;
+                        return <a href={footLink?.link || ''} className="text-lg transition-all hover:scale-105">{footLink.text}</a>;
                     })}
                 </div>
                 <div className="flex flex-col">
                     <h3 className="font-bold text-3xl mb-2">Socials</h3>
                     {SocialLinks.map((link) => {
-                        return <a href={link?.link || ''} target="_blank" className="text-lg flex items-center gap-2">{link?.icons}{link.text}</a>;
+                        return <a href={link?.link || ''} target="_blank" className="text-lg flex items-center gap-2 transition-all hover:scale-105">{link?.icons}{link.text}</a>;
                     })}
                 </div>
                 <div></div>
             </div>
+            <div className="text-xs text-center bg-black text-white text-opacity-75">Copyright©2024 VoterLight PVT.LTD</div>
         </>
     );
 }
