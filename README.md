@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + BUN
+
+To run the project:- 
+```js
+bun install
+bunx --bun vite
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
