@@ -3,6 +3,7 @@ import Steps from "../Components/Home/steps";
 import "./global.css";
 import Layout from "../Layout/layout";
 import Hero from "../Components/Home/hero";
+import Information from "../Components/Home/information";
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
                     <Hero />
                     <Steps />
                     <VoteToday />
+                    <Information />
                 </>
             </Layout>
         </>

@@ -17,7 +17,7 @@ export default function Hero() {
                     clickable: true,
                 }}
                 autoplay={{
-                    delay: 2500,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 spaceBetween={50}
@@ -29,6 +29,9 @@ export default function Hero() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-full h-[350px] bg-[url(https://www.eci.gov.in/eci-backend/public/banner/April/cg1wvFMPLChgIFV1712124541.jpg)] bg-cover bg-center"></div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-full h-[350px] bg-[url(https://www.eci.gov.in/eci-backend/public/banner/January/2rEFXb3Z7BOAx6G1706514283.jpg)] bg-cover bg-center"></div>
                 </SwiperSlide>
             </Swiper>
         </>

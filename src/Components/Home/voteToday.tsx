@@ -15,7 +15,7 @@ export default function VoteToday() {
                         <h1 className="text-8xl">Vote Today</h1>
                     </div>
                     <div className="w-full flex gap-[5%] justify-center mt-8 text-xl">
-                        <Link to='/vote' style={{boxShadow: '2px 2px 10px 0px #000000'}} className="py-2 px-4 bg-[#e77300] text-white rounded-md transition-all hover:scale-105 animate-pulse hover:animate-none">
+                        <Link to='/vote' className="py-2 px-4 bg-[#e77300] text-white rounded-md transition-all hover:scale-105 animate-pulse hover:animate-none">
                             Vote Now
                         </Link>
                         <button className="py-2 px-4 bg-[#329203] text-white rounded-md transition-all hover:scale-105">

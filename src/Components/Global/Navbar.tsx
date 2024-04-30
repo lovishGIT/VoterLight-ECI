@@ -14,7 +14,7 @@ const navLinks: navLinkType[]= [
     },
     {
         text: 'Information',
-        link: '/info'
+        link: '/#Information'
     }, 
     {
         text: 'Helpdesk',
@@ -43,7 +43,7 @@ export default function Navbar() {
                 </div>
                 <div className="w-[50%] flex items-center justify-end gap-[5%]">
                     {navLinks.map((nav)=> {
-                        return <Link to={nav?.link || ''} className="hover:scale-105">{nav.text}</Link>
+                        return <a href={nav?.link || ''} className="hover:scale-105">{nav.text}</a>
                     })}
                     <LoginButton />
                 </div>
