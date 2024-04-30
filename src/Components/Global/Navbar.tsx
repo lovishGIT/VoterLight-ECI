@@ -30,7 +30,7 @@ export default function Navbar() {
                 Election Comission of India
                 <span className="w-[2px] h-full bg-black mx-2"></span> 
                 This website is made for project work for an educational institute. For Real Website, go to
-                <a className="mx-2 animate-pulse text-blue-700 hover:text-red-500" href="https://www.eci.gov.in/">https://www.eci.gov.in/</a>
+                <a className="mx-2 animate-pulse text-blue-700 hover:text-red-500" href="https://www.eci.gov.in/" target="_blank">https://www.eci.gov.in/</a>
             </div>
 
             <div className="px-[5%] flex gap-[2%] items-center justify-between">

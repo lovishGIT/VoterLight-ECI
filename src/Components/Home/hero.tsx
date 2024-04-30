@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -12,13 +11,12 @@ export default function Hero() {
                 modules={[Autoplay, Pagination, Navigation]}
                 keyboard={{
                     enabled: true,
-                  }}
+                }}
                 pagination={{
                     clickable: true,
                 }}
                 autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
+                    delay: 4000,
                 }}
                 spaceBetween={50}
                 slidesPerView={1}

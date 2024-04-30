@@ -18,9 +18,9 @@ export default function VoteToday() {
                         <Link to='/vote' className="py-2 px-4 bg-[#e77300] text-white rounded-md transition-all hover:scale-105 animate-pulse hover:animate-none">
                             Vote Now
                         </Link>
-                        <button className="py-2 px-4 bg-[#329203] text-white rounded-md transition-all hover:scale-105">
+                        <a href='/#Information' className="py-2 px-4 bg-[#329203] text-white rounded-md transition-all hover:scale-105">
                             Read More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
