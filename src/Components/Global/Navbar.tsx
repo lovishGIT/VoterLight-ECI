@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import LoginButton from "../Login/loginButton";
 
 interface navLinkType {
@@ -42,8 +41,8 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className="w-[50%] flex items-center justify-end gap-[5%]">
-                    {navLinks.map((nav)=> {
-                        return <a href={nav?.link || ''} className="hover:scale-105">{nav.text}</a>
+                    {navLinks.map((nav:navLinkType, index:number)=> {
+                        return <a href={nav?.link || ''} className="hover:scale-105" key={index}>{nav.text}</a>
                     })}
                     <LoginButton />
                 </div>

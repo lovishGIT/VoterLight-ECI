@@ -2,7 +2,13 @@ import { FaGithub, FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-const footerLinks = [
+interface linkType { 
+    text: string;
+    link?: string;
+    icons?: React.ReactElement;
+}
+
+const footerLinks: linkType[] = [
     {
         text: "Vote Now",
         link: '/vote'
@@ -14,7 +20,7 @@ const footerLinks = [
         text: "Help Desk",
     },
 ];
-const SocialLinks = [
+const SocialLinks: linkType[] = [
     {
         text: "linkedIn",
         icons: <FaLinkedin />,
@@ -58,14 +64,14 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                     <h3 className="font-bold text-3xl mb-2">Sections</h3>
-                    {footerLinks.map((footLink) => {
-                        return <a href={footLink?.link || ''} className="text-lg transition-all hover:scale-105">{footLink.text}</a>;
+                    {footerLinks.map((footLink:linkType, index:number) => {
+                        return <a href={footLink?.link || ''} className="text-lg transition-all hover:scale-105" key={index}>{footLink.text}</a>;
                     })}
                 </div>
                 <div className="flex flex-col">
                     <h3 className="font-bold text-3xl mb-2">Socials</h3>
-                    {SocialLinks.map((link) => {
-                        return <a href={link?.link || ''} target="_blank" className="text-lg flex items-center gap-2 transition-all hover:scale-105">{link?.icons}{link.text}</a>;
+                    {SocialLinks.map((link:linkType, index:number) => {
+                        return <a href={link?.link || ''} target="_blank" className="text-lg flex items-center gap-2 transition-all hover:scale-105" key={index}>{link?.icons}{link.text}</a>;
                     })}
                 </div>
                 <div></div>
