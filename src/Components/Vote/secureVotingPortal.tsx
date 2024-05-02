@@ -1,6 +1,6 @@
 import rjdElectionFlag from '../../assets/rjdElectionFlag.png'
 import VoterDropdown from "./voterDropdown";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface votingProps {
     setVotingPhase: (phase: number) => void;
@@ -83,7 +83,7 @@ export default function SecureVotingPortal({setVotingPhase}: votingProps) {
                                     {...party} 
                                     id={party?.id} 
                                     check={party?.checked || false} 
-                                    onChange={()=> handlePartyChange(party?.id)}/>
+                                    onChange={handlePartyChange}/>
                     })}
                     <div className='flex justify-center'>
                         <button className='px-4 py-2 rounded-lg bg-black text-white' type="submit">Submit</button>

@@ -14,7 +14,7 @@ export default function VoterDropdown({head, partyName, iconLink, check, id, onC
         <div className="flex justify-between items-center gap-6" key={id}>
             <Switch
                 checked={check}
-                onChange={onChange}
+                onChange={()=> onChange(id)}
                 checkedIcon={false}
                 uncheckedIcon={false}
             />

@@ -16,7 +16,7 @@ export function LoginCompWithPhoneNumber({handleSubmit}: PhoneNumberProps) {
         contactNumber: '',
         password: ''
     })
-    const handleChange= (event)=> {
+    const handleChange= (event: { preventDefault: () => void; target: { name: string; value: string; }; })=> {
         event.preventDefault();
         const name= event.target.name;
         const value= event.target.value;

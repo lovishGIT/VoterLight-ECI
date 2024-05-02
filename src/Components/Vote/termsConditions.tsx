@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
 interface votingProps {
     setVotingPhase: (phase: number) => void;
