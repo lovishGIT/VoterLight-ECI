@@ -1,6 +1,7 @@
 import { FaGithub, FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 interface linkType { 
     text: string;
@@ -65,7 +66,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <h3 className="font-bold text-3xl mb-2">Sections</h3>
                     {footerLinks.map((footLink:linkType, index:number) => {
-                        return <a href={footLink?.link || ''} className="text-lg transition-all hover:scale-105" key={index}>{footLink.text}</a>;
+                        return <Link to={footLink?.link || ''} className="text-lg transition-all hover:scale-105" key={index}>{footLink.text}</Link>;
                     })}
                 </div>
                 <div className="flex flex-col">

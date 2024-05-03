@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import IndianMapBg from "../../assets/IndianMapBg.png";
 
 interface stepTypes {
@@ -38,7 +39,7 @@ export default function Steps() {
                         {stepsBeforeVoting.map(
                             (step: stepTypes, index: number) => {
                                 return (
-                                    <a href={step?.link || ''} key={index}>
+                                    <Link to={step?.link || ''} key={index}>
                                         <li className="w-full h-[80px] flex items-center text-xl hover:scale-105">
                                             <div className="w-[65px] h-[65px] bg-[#052963] text-white flex justify-center items-center rounded-full z-1">
                                                 {index + 1}
@@ -47,7 +48,7 @@ export default function Steps() {
                                                 {step.head}
                                             </div>
                                         </li>
-                                    </a>
+                                    </Link>
                                 );
                             }
                         )}

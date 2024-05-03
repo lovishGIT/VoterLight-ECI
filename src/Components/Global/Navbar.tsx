@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import LoginButton from "../Login/loginButton";
 
 interface navLinkType {
     text: string;
-    link?: string; 
+    link?: string;
+    anchor?: boolean; 
 }
 
 
@@ -13,7 +15,8 @@ const navLinks: navLinkType[]= [
     },
     {
         text: 'Information',
-        link: '/#Information'
+        link: '/#Information',
+        anchor: true,
     }, 
     {
         text: 'Helpdesk',
@@ -42,8 +45,14 @@ export default function Navbar() {
                 </div>
                 <div className="w-[50%] flex items-center justify-end gap-[5%]">
                     {navLinks.map((nav:navLinkType, index:number)=> {
-                        return <a href={nav?.link || ''} className="hover:scale-105" key={index}>{nav.text}</a>
-                    })}
+                        return (
+                        <>
+                            {nav?.anchor ? 
+                                <a href={nav?.link || ""} className="hover:scale-105" key={index}>{nav.text}</a>
+                                :<Link to={nav?.link || ''} className="hover:scale-105" key={index}>{nav.text}</Link>
+                            }
+                        </>
+                    )})}
                     <LoginButton />
                 </div>
             </div>
