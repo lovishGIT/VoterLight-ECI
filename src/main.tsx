@@ -1,4 +1,5 @@
 import React from 'react'
+import './global.css';
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NotFound from './NotFound.tsx';
